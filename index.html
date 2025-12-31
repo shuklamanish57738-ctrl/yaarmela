@@ -137,6 +137,103 @@
 </body>
 </html>
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instagram Clone</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #fafafa;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      background: #fff;
+      border-bottom: 1px solid #dbdbdb;
+    }
+
+    .nav button {
+      background: none;
+      border: none;
+      font-weight: bold;
+      color: #0095f6;
+      cursor: pointer;
+    }
+
+    .section {
+      display: none;
+      padding: 15px;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    .story-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(red, orange);
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5px;
+    }
+
+    .chat-user {
+      padding: 10px;
+      border-bottom: 1px solid #dbdbdb;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="nav">
+  <button onclick="show('post')">Post</button>
+  <button onclick="show('reel')">Reels</button>
+  <button onclick="show('story')">Story</button>
+  <button onclick="show('chat')">Message</button>
+</div>
+
+<div id="post" class="section active">
+  <h3>Post Feed</h3>
+  <p>Yaha posts dikhenge</p>
+</div>
+
+<div id="reel" class="section">
+  <h3>Reels</h3>
+  <p>Yaha reels dikhenge</p>
+</div>
+
+<div id="story" class="section">
+  <h3>Stories</h3>
+  <div class="story-circle">Ansh</div>
+  <div class="story-circle">Rahul</div>
+</div>
+
+<div id="chat" class="section">
+  <h3>Messages</h3>
+  <div class="chat-user">rahul_01</div>
+  <div class="chat-user">coding_world</div>
+</div>
+
+<script>
+function show(id) {
+  let sections = document.querySelectorAll('.section');
+  sections.forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
+
 
 
 
