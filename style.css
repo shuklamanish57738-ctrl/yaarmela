@@ -115,3 +115,16 @@ button {
 .single-comment b {
   color: #262626;
 }
+
+.post-container {
+  display: flex;
+  gap: 15px;
+}
+
+.post {
+  width: 60%;
+}
+
+.comment-box {
+  width: 40%;
+}
