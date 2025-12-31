@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  background: #fafafa;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  max-width: 420px;
+  margin: auto;
+  background: white;
+}
+
+.header {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+}
+
+.post {
+  padding: 10px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.post-img {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.actions {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
