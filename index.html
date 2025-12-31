@@ -625,6 +625,159 @@ function changeUsername() {
 </body>
 </html>
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Dashboard</title>
+
+  <style>
+    *{
+      box-sizing: border-box;
+      color: black;
+      font-family: Arial;
+    }
+
+    body{
+      margin:0;
+      background:#ffffff;
+    }
+
+    /* TOP BAR */
+    .topbar{
+      padding:10px;
+      border-bottom:1px solid #ccc;
+      font-weight:bold;
+    }
+
+    /* DASHBOARD */
+    .dashboard{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+      padding:15px;
+    }
+
+    .box{
+      border:1px solid #ccc;
+      border-radius:10px;
+      padding:20px 5px;
+      text-align:center;
+      background:#f9f9f9;
+      cursor:pointer;
+      transition:0.2s;
+    }
+
+    .box:hover{
+      background:#eeeeee;
+    }
+
+    .icon{
+      font-size:24px;
+    }
+
+    .title{
+      margin-top:5px;
+      font-size:14px;
+      font-weight:bold;
+    }
+
+    /* MESSAGE */
+    .section{
+      display:none;
+      padding:20px;
+    }
+
+    button{
+      padding:6px 10px;
+      border:1px solid #aaa;
+      background:#eee;
+      cursor:pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- TOP -->
+<div class="topbar">🏠 Home</div>
+
+<!-- HOME BOXES -->
+<div class="dashboard" id="home">
+
+  <div class="box" onclick="openSection('story')">
+    <div class="icon">📸</div>
+    <div class="title">Story</div>
+  </div>
+
+  <div class="box" onclick="openSection('reel')">
+    <div class="icon">🎬</div>
+    <div class="title">Reels</div>
+  </div>
+
+  <div class="box" onclick="openSection('post')">
+    <div class="icon">📝</div>
+    <div class="title">Post</div>
+  </div>
+
+  <div class="box" onclick="openSection('chat')">
+    <div class="icon">💬</div>
+    <div class="title">Message</div>
+  </div>
+
+  <div class="box" onclick="openSection('profile')">
+    <div class="icon">👤</div>
+    <div class="title">Profile</div>
+  </div>
+
+  <div class="box">
+    <div class="icon">⚙️</div>
+    <div class="title">Settings</div>
+  </div>
+
+</div>
+
+<!-- SECTIONS -->
+<div class="section" id="story">
+  <h3>📸 Story Section</h3>
+  <button onclick="goHome()">Back</button>
+</div>
+
+<div class="section" id="reel">
+  <h3>🎬 Reel Section</h3>
+  <button onclick="goHome()">Back</button>
+</div>
+
+<div class="section" id="post">
+  <h3>📝 Post Section</h3>
+  <button onclick="goHome()">Back</button>
+</div>
+
+<div class="section" id="chat">
+  <h3>💬 Message Section</h3>
+  <button onclick="goHome()">Back</button>
+</div>
+
+<div class="section" id="profile">
+  <h3>👤 Profile Section</h3>
+  <button onclick="goHome()">Back</button>
+</div>
+
+<script>
+function openSection(id){
+  document.getElementById("home").style.display="none";
+  document.querySelectorAll(".section").forEach(s=>s.style.display="none");
+  document.getElementById(id).style.display="block";
+}
+
+function goHome(){
+  document.getElementById("home").style.display="grid";
+  document.querySelectorAll(".section").forEach(s=>s.style.display="none");
+}
+</script>
+
+</body>
+</html>
+
 
 
 
