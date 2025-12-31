@@ -459,6 +459,172 @@ function saveProfile() {
 </body>
 </html>
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instagram Clone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #fafafa;
+    }
+
+    /* TOP BAR */
+    .topbar {
+      background: #fff;
+      padding: 10px;
+      border-bottom: 1px solid #dbdbdb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .username {
+      font-weight: bold;
+    }
+
+    /* STORIES */
+    .stories {
+      display: flex;
+      overflow-x: auto;
+      padding: 10px;
+      background: #fff;
+      border-bottom: 1px solid #dbdbdb;
+    }
+
+    .story {
+      text-align: center;
+      margin-right: 10px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .story img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      border: 2px solid red;
+    }
+
+    /* HOME */
+    .home {
+      padding: 15px;
+    }
+
+    /* STORY VIEW */
+    .story-view {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: black;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 10;
+    }
+
+    .story-view img {
+      width: 80%;
+      max-width: 300px;
+      border-radius: 10px;
+    }
+
+    .like-btn {
+      margin-top: 10px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* PROFILE EDIT */
+    .edit {
+      padding: 10px;
+      background: #fff;
+      border-top: 1px solid #dbdbdb;
+    }
+
+    .edit input {
+      padding: 5px;
+      width: 60%;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="username" id="usernameText">Ansh</div>
+</div>
+
+<!-- STORIES (TOP MOST) -->
+<div class="stories">
+  <div class="story" onclick="openStory('story1.jpg')">
+    <img src="https://via.placeholder.com/100">
+    <div>Ansh</div>
+  </div>
+
+  <div class="story" onclick="openStory('story2.jpg')">
+    <img src="https://via.placeholder.com/100">
+    <div>Rahul</div>
+  </div>
+
+  <div class="story" onclick="openStory('story3.jpg')">
+    <img src="https://via.placeholder.com/100">
+    <div>Aman</div>
+  </div>
+</div>
+
+<!-- HOME -->
+<div class="home">
+  <h3>🏠 Home</h3>
+  <p>Yaha posts / reels aayengi</p>
+</div>
+
+<!-- STORY VIEW -->
+<div class="story-view" id="storyView">
+  <img id="storyImg">
+  <div class="like-btn" onclick="likeStory()">❤️ <span id="likeCount">0</span></div>
+  <br>
+  <button onclick="closeStory()">Close</button>
+</div>
+
+<!-- USERNAME EDIT -->
+<div class="edit">
+  <input type="text" id="newUsername" placeholder="Change username">
+  <button onclick="changeUsername()">Save</button>
+</div>
+
+<script>
+let likes = 0;
+
+function openStory(img) {
+  document.getElementById("storyView").style.display = "flex";
+  document.getElementById("storyImg").src = img;
+}
+
+function closeStory() {
+  document.getElementById("storyView").style.display = "none";
+}
+
+function likeStory() {
+  likes++;
+  document.getElementById("likeCount").innerText = likes;
+}
+
+function changeUsername() {
+  let name = document.getElementById("newUsername").value;
+  if(name !== "") {
+    document.getElementById("usernameText").innerText = name;
+    document.getElementById("newUsername").value = "";
+  }
+}
+</script>
+
+</body>
+</html>
+
 
 
 
