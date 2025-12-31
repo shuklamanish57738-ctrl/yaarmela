@@ -129,3 +129,69 @@ button {
   text-decoration: underline;
 }
 
+body {
+  font-family: Arial;
+  background: #f2f2f2;
+}
+
+.chat-container {
+  width: 350px;
+  height: 500px;
+  background: #fff;
+  margin: 30px auto;
+  border: 1px solid #dbdbdb;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.message {
+  max-width: 70%;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+.message.me {
+  background: #0095f6;
+  color: white;
+  margin-left: auto;
+}
+
+.message.other {
+  background: #efefef;
+  color: #000;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #dbdbdb;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.chat-input button {
+  background: #0095f6;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
