@@ -51,3 +51,67 @@ button {
   font-size: 22px;
   cursor: pointer;
 }
+
+/* Comment Box */
+.comment-box {
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #dbdbdb;
+  padding: 10px;
+}
+
+/* Name input */
+.comment-box input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 6px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Comment textarea */
+.comment-box textarea {
+  width: 100%;
+  padding: 8px;
+  height: 60px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Post button */
+.comment-box button {
+  background: #0095f6;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  margin-top: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.comment-box button:hover {
+  background: #0077cc;
+}
+
+/* Comment list */
+.comments {
+  margin-top: 10px;
+}
+
+/* Single comment */
+.single-comment {
+  padding: 6px 0;
+  border-bottom: 1px solid #efefef;
+  font-size: 14px;
+}
+
+/* Username */
+.single-comment b {
+  color: #262626;
+}
