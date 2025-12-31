@@ -116,3 +116,16 @@ button {
   color: #262626;
 }
 
+.share-btn {
+  background: none;
+  border: none;
+  color: #0095f6;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.share-btn:hover {
+  text-decoration: underline;
+}
+
