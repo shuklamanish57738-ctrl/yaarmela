@@ -91,6 +91,52 @@
 <h3>Feed</h3>
 <div id="feed"></div>
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instagram Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Top Navigation -->
+<div class="nav">
+  <button onclick="showSection('feed')">Post</button>
+  <button onclick="showSection('reels')">Reels</button>
+  <button onclick="showSection('story')">Story</button>
+  <button onclick="showSection('chat')">Message</button>
+</div>
+
+<!-- Sections -->
+
+<div id="feed" class="section active">
+  <h3>Posts</h3>
+  <img src="https://via.placeholder.com/300">
+</div>
+
+<div id="reels" class="section">
+  <h3>Reels</h3>
+  <video controls width="300">
+    <source src="" type="video/mp4">
+  </video>
+</div>
+
+<div id="story" class="section">
+  <h3>Stories</h3>
+  <div class="story-circle">Ansh</div>
+  <div class="story-circle">Rahul</div>
+</div>
+
+<div id="chat" class="section">
+  <h3>Messages</h3>
+  <div class="chat-user">rahul_01</div>
+  <div class="chat-user">coding_world</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
 
 
 
