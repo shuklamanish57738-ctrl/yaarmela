@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My First Website</title>
+  <meta charset="UTF-8">
+  <title>YaarMela</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello Ansh 👋</h1>
-  <p>Ye meri GitHub se bani website hai.</p>
+
+<div class="app">
+  <div class="header">
+    <h2>YaarMela</h2>
+  </div>
+
+  <div class="post">
+    <div class="post-header">
+      <img src="https://i.pravatar.cc/40" class="avatar">
+      <span>ansh_09</span>
+    </div>
+
+    <img src="https://picsum.photos/400/400" class="post-img">
+
+    <div class="actions">
+      <button onclick="like()">❤️</button>
+      <span id="likeCount">0 likes</span>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
