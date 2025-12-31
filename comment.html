@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comment Box</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+    .comment-box {
+      background: white;
+      padding: 15px;
+      border-radius: 5px;
+      width: 300px;
+    }
+    input, textarea {
+      width: 100%;
+      margin: 5px 0;
+      padding: 8px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+    }
+    .comments {
+      margin-top: 15px;
+    }
+    .single-comment {
+      background: #eee;
+      padding: 5px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="comment-box">
+  <h3>Comment</h3>
+  <input type="text" id="name" placeholder="Your Name">
+  <textarea id="comment" placeholder="Write comment..."></textarea>
+  <button onclick="addComment()">Post</button>
+
+  <div class="comments" id="comments"></div>
+</div>
+
+<script>
+  function addComment() {
+    var name = document.getElementById("name").value;
+    var comment = document.getElementById("comment").value;
+
+    if(name === "" || comment === "") {
+      alert("Name aur comment likho");
+      return;
+    }
+
+    var div = document.createElement("div");
+    div.className = "single-comment";
+    div.innerHTML = "<b>" + name + "</b>: " + comment;
+
+    document.getElementById("comments").appendChild(div);
+
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+  }
+</script>
+
+</body>
+</html>
