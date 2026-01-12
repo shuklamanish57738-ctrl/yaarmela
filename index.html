@@ -778,7 +778,31 @@ function goHome(){
 </body>
 </html>
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YaarMela Reels</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<!-- Reel Card -->
+<div class="reel" onclick="openReel()">
+  <p>▶ Click to open Reel</p>
+</div>
 
+<!-- Reel Full Screen -->
+<div class="reelView" id="reelView">
+  <video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay loop></video>
 
+  <div class="actions">
+    <button id="likeBtn" onclick="likeReel(event)">❤️ <span id="likeCount">0</span></button>
+    <button id="followBtn" onclick="followUser(event)">Follow</button>
+  </div>
 
+  <span class="close" onclick="closeReel()">✖</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
